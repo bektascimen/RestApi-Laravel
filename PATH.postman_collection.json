@@ -1,0 +1,615 @@
+{
+	"info": {
+		"_postman_id": "3aa055cb-9cd2-4b2c-b8a7-0d47da292c4c",
+		"name": "PATH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Veri tabanındaki email ve şifre ile bir jtw token alabilinmektedir. Bu token sayesinde diğer bilgiler gözükecektir."
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU5NDg0MzM4NywiZXhwIjoxNTk0OTI5Nzg3LCJuYmYiOjE1OTQ4NDMzODcsImp0aSI6Im9RbnhkTE96d3REb0ZQcEQiLCJzdWIiOjEyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.lPj_9FKzg3hHSKRqYvv5q29RLvQ9dWGqebtn2g_DjW0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "Hangi kullanıcıya ait token kullanıldıysa o kullanıcı bilgileri gelecektir.\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Company",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU5NDg0Mzk4NCwiZXhwIjoxNTk0OTMwMzg0LCJuYmYiOjE1OTQ4NDM5ODQsImp0aSI6IjNoRE0wbTVEQU01bEdOUkIiLCJzdWIiOjEyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0._qvXEqTxxneTap2yicQp28yTQG1dCRB9CSHxlDxGl1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company"
+					]
+				},
+				"description": "Şirket bilgileri"
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU5NDg0Mzk4NCwiZXhwIjoxNTk0OTMwMzg0LCJuYmYiOjE1OTQ4NDM5ODQsImp0aSI6IjNoRE0wbTVEQU01bEdOUkIiLCJzdWIiOjEyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0._qvXEqTxxneTap2yicQp28yTQG1dCRB9CSHxlDxGl1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders"
+					]
+				},
+				"description": "Şiparişlerin çekilmesi kullanıcı ve ürün bilgileri ile birlikte."
+			},
+			"response": []
+		},
+		{
+			"name": "Order[$id]",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU5NDg0Mzk4NCwiZXhwIjoxNTk0OTMwMzg0LCJuYmYiOjE1OTQ4NDM5ODQsImp0aSI6IjNoRE0wbTVEQU01bEdOUkIiLCJzdWIiOjEyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0._qvXEqTxxneTap2yicQp28yTQG1dCRB9CSHxlDxGl1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"10"
+					]
+				},
+				"description": "Id ye göre siparişin çekilmesi, sipariş detayı."
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU5NDg0Mzk4NCwiZXhwIjoxNTk0OTMwMzg0LCJuYmYiOjE1OTQ4NDM5ODQsImp0aSI6IjNoRE0wbTVEQU01bEdOUkIiLCJzdWIiOjEyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0._qvXEqTxxneTap2yicQp28yTQG1dCRB9CSHxlDxGl1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "orderCode",
+							"value": "Order-11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"10"
+					]
+				},
+				"description": "Siparişin güncellenmesi."
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU5NDg0Mzk4NCwiZXhwIjoxNTk0OTMwMzg0LCJuYmYiOjE1OTQ4NDM5ODQsImp0aSI6IjNoRE0wbTVEQU01bEdOUkIiLCJzdWIiOjEyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0._qvXEqTxxneTap2yicQp28yTQG1dCRB9CSHxlDxGl1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "userId",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "orderCode",
+							"value": "Order-3",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Deneme",
+							"type": "text"
+						},
+						{
+							"key": "shippingDate",
+							"value": "2020-07-15 11:48:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders"
+					]
+				},
+				"description": "Siparişin oluşturulması\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU5NDg0Mzk4NCwiZXhwIjoxNTk0OTMwMzg0LCJuYmYiOjE1OTQ4NDM5ODQsImp0aSI6IjNoRE0wbTVEQU01bEdOUkIiLCJzdWIiOjEyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0._qvXEqTxxneTap2yicQp28yTQG1dCRB9CSHxlDxGl1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/12",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"12"
+					]
+				},
+				"description": "Siparişin silinmesi."
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU5NDg0Mzk4NCwiZXhwIjoxNTk0OTMwMzg0LCJuYmYiOjE1OTQ4NDM5ODQsImp0aSI6IjNoRE0wbTVEQU01bEdOUkIiLCJzdWIiOjEyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0._qvXEqTxxneTap2yicQp28yTQG1dCRB9CSHxlDxGl1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Ürünlerin çekilmesi."
+			},
+			"response": []
+		},
+		{
+			"name": "Product[$id]",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU5NDg0Mzk4NCwiZXhwIjoxNTk0OTMwMzg0LCJuYmYiOjE1OTQ4NDM5ODQsImp0aSI6IjNoRE0wbTVEQU01bEdOUkIiLCJzdWIiOjEyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0._qvXEqTxxneTap2yicQp28yTQG1dCRB9CSHxlDxGl1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				},
+				"description": "Id ye göre ürün çekilmesi."
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU5NDg0Mzk4NCwiZXhwIjoxNTk0OTMwMzg0LCJuYmYiOjE1OTQ4NDM5ODQsImp0aSI6IjNoRE0wbTVEQU01bEdOUkIiLCJzdWIiOjEyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0._qvXEqTxxneTap2yicQp28yTQG1dCRB9CSHxlDxGl1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Product",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				},
+				"description": "Ürün bilgilerinin güncellenmesi."
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU5NDg0Mzk4NCwiZXhwIjoxNTk0OTMwMzg0LCJuYmYiOjE1OTQ4NDM5ODQsImp0aSI6IjNoRE0wbTVEQU01bEdOUkIiLCJzdWIiOjEyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0._qvXEqTxxneTap2yicQp28yTQG1dCRB9CSHxlDxGl1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ss",
+							"type": "text"
+						},
+						{
+							"key": "slug",
+							"value": "ss",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "ss",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Ürünü veri tabanına eklemek."
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU5NDg0Mzk4NCwiZXhwIjoxNTk0OTMwMzg0LCJuYmYiOjE1OTQ4NDM5ODQsImp0aSI6IjNoRE0wbTVEQU01bEdOUkIiLCJzdWIiOjEyLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0._qvXEqTxxneTap2yicQp28yTQG1dCRB9CSHxlDxGl1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"6"
+					]
+				},
+				"description": "Ürünün silinmesi."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
