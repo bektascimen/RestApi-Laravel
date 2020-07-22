@@ -11,6 +11,7 @@ use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Carbon\Carbon;
 
 class OrderController extends Controller
 {
@@ -79,14 +80,25 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
+        $dt = new Carbon();
+
         $input = $request->all();
 
-        $order->update($input);
+        if ($dt<$order->shippingDate){
+            $order->update($input);
 
-        return response([
-            'data' => $order,
-            'message' => 'Sipariş bilgileri güncellendi.'
-        ], 200);
+            return response([
+                'data' => $order,
+                'message' => 'Sipariş bilgileri güncellendi.'
+            ], 200);
+        }else{
+            return response([
+                'data' => $order,
+                'message' => 'Siparişin tarihin geçtiği için güncellenemedi.'
+            ], 200);
+        }
+
+
     }
 
     /**
